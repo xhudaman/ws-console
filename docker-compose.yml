@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: sh
+    working_dir: /src
+    volumes:
+      - ${PWD}/:/src
