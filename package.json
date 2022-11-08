@@ -1,0 +1,14 @@
+{
+  "name": "@xhudaman/ws-console",
+  "version": "0.1.0",
+  "description": "Console override for sending logs to a websocket server.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {},
+  "keywords": [],
+  "author": "xhudaman (Matthew Edell)",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
