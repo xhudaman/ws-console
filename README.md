@@ -38,8 +38,11 @@ const wsConsole = WSConosle({
 
 ### Configuration
 
-|          Key           | Required | Default Value |                                 Accepted Values                                 |
-| :--------------------: | :------: | :-----------: | :-----------------------------------------------------------------------------: |
-|     debugServerUrl     |  `true`  |      N/A      | Any valid WebSocket URL. For example: `ws://domain:port` or `wss://domain:port` |
-|   enableInProduction   | `false`  |    `false`    |                                `true` or `false`                                |
-| enableConsoleOverrides | `false`  |    `true`     |                                `true` or `false`                                |
+|                Key                | Required | Default Value |                                 Accepted Values                                 |
+| :-------------------------------: | :------: | :-----------: | :-----------------------------------------------------------------------------: |
+|          debugServerUrl           |  `true`  |      N/A      | Any valid WebSocket URL. For example: `ws://domain:port` or `wss://domain:port` |
+|        enableInProduction         | `false`  |    `false`    |                                `true` or `false`                                |
+|      enableConsoleOverrides       | `false`  |    `true`     |                                `true` or `false`                                |
+| disablePassthroughToNativeConsole | `false`  |    `false`    |                                `true` or `false`                                |
+
+> **Warning**: If you are using this package on the Switch in the `skyline-web` browser, you **must** set `disablePassthroughToNativeConsole` to `true` or it will block the remainder of the code running in the same scope.

@@ -7,7 +7,6 @@ class WsConsole {
       enableInProduction,
       enableConsoleOverrides = true,
       debugServerUrl,
-      disablePassthroughToNativeConsole,
     } = config || {};
 
     if (process.env.NODE_ENV !== "development" && !enableInProduction) {
@@ -147,7 +146,7 @@ class WsConsole {
         this.logger.log(message, data);
       }
 
-      if (!disablePassthroughToNativeConsole) {
+      if (!this.config.disablePassthroughToNativeConsole) {
         _log(...args);
       }
     };
@@ -159,7 +158,7 @@ class WsConsole {
         this.logger.info(message, data);
       }
 
-      if (!disablePassthroughToNativeConsole) {
+      if (!this.config.disablePassthroughToNativeConsole) {
         _info(...args);
       }
     };
@@ -171,7 +170,7 @@ class WsConsole {
         this.logger.debug(message, data);
       }
 
-      if (!disablePassthroughToNativeConsole) {
+      if (!this.config.disablePassthroughToNativeConsole) {
         _debug(...args);
       }
     };
@@ -181,7 +180,7 @@ class WsConsole {
         this.logger.error(error);
       }
 
-      if (!disablePassthroughToNativeConsole) {
+      if (!this.config.disablePassthroughToNativeConsole) {
         _error(error);
       }
     };
@@ -191,7 +190,7 @@ class WsConsole {
         this.logger.trace(error);
       }
 
-      if (!disablePassthroughToNativeConsole) {
+      if (!this.config.disablePassthroughToNativeConsole) {
         _trace(error);
       }
     };
